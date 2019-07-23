@@ -25,11 +25,28 @@ function encode(val) {
 encodeURI忽略协议前缀（'http：//'）和域名部分。
 
 不会被编码的字符包括以下：
-| 类型 | 包含 |
-| ------------- |:-------------:|
-| 保留字符 | `; , / ? : @ & = + $`|
-| 非转义的字符 | `字母 数字 - _ . ! ~ * ' ( )`|
-| 数字符号 | `#`|
+<table border="1" style="border:1px solid #111; border-collapse:collapse; background-color:white;">
+<thead style="border:1px solid #111;">
+<tr>
+<th>类型</th>
+<th>包含</th>
+</tr>
+</thead>
+<tbody style="border:1px solid #111;">
+<tr >
+<td style="border:1px solid #111;">保留字符</td>
+<td style="border:1px solid #111;">`; , / ? : @ & = + $`</td>
+</tr>
+<tr>
+<td style="border:1px solid #111;">非转义的字符</td>
+<td style="border:1px solid #111;">`字母 数字 - _ . ! ~ * ' ( )`</td>
+</tr>
+<tr>
+<td style="border:1px solid #111;">数字符号</td>
+<td style="border:1px solid #111;">`#`</td>
+</tr>
+</tbody>
+</table>
 
 其他字符都会被%进行编码，例如：`中国`、`ママ`等非以上列举的字符。
 
