@@ -17,18 +17,19 @@ function encode(val) {
 }
 ```
 <h2 style="color:#4042b3;font-weight:600">encodeURI</h2>
-[encodeURI](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURI):encodeURI()  函数通过将特定字符的每个实例替换为一个、两个、三或四转义序列来对统一资源标识符 (URI) 进行编码 (该字符的 UTF-8 编码仅为四转义序列,由两个 "代理" 字符组成)。
+
+[encodeURI](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURI) : encodeURI函数通过将特定字符的每个实例替换为一个、两个、三或四转义序列来对统一资源标识符 (URI) 进行编码 (该字符的 UTF-8 编码仅为四转义序列,由两个 "代理" 字符组成)。
 
 在URI中，有一些字符会[被%进行编码](https://en.wikipedia.org/wiki/Percent-encoding)，维基百科中的介绍为：百分号编码（英语：Percent-encoding，又称：URL编码（英语：URL encoding）），是特定上下文的统一资源定位符 (URL)的编码机制. 实际上也适用于统一资源标志符（URI）的编码。也用于为application/x-www-form-urlencodedMIME准备数据，因为它用于通过HTTP的请求操作（request）提交HTML表单数据。
 
 encodeURI忽略协议前缀（'http：//'）和域名部分。
 
 不会被编码的字符包括以下：
-| 类型        | 包含           |
+| 类型 | 包含 |
 | ------------- |:-------------:|
-| 保留字符      | `; , / ? : @ & = + $` |
-| 非转义的字符      | `字母 数字 - _ . ! ~ * ' ( )`     |
-| 数字符号 | `#`     |
+| 保留字符 | `; , / ? : @ & = + $`|
+| 非转义的字符 | `字母 数字 - _ . ! ~ * ' ( )`|
+| 数字符号 | `#`|
 
 其他字符都会被%进行编码，例如：`中国`、`ママ`等非以上列举的字符。
 
